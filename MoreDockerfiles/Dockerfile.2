@@ -1,0 +1,15 @@
+
+## Well, There aren't many strategies available for optimizing size, speed or security, since It's already made out of 3 scripts only.
+## I have used another base image with unprivileged default settings.
+
+FROM nginxinc/nginx-unprivileged
+
+WORKDIR /usr/share/nginx/html
+
+COPY . .
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+
+

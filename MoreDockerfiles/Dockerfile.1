@@ -1,0 +1,27 @@
+FROM nginx:alpine AS base
+
+WORKDIR /app
+
+COPY . .
+
+# EXPOSE 80
+
+#CMD ["nginx", "-g", "daemon off;"]
+
+
+# Although the given application is pretty simple, I have tried to use multi-stage to copy only needed binaries for this static application. It reduced the size of the image from 44mb -> 42Mb
+FROM nginx:alpine
+
+WORKDIR /
+
+COPY --from=build /app/index.html /usr/share/nginx/html/index.html
+COPY --from=build /app/script.js /usr/share/nginx/html/script.js
+COPY --from=build /app/style.css /usr/share/nginx/html/style.css
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+
+
+
+
