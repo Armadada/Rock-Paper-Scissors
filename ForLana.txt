@@ -1,0 +1,7 @@
+When babies learn new languages and develop their communication skills - It's much easier for them to listen and comprehend rather than verbally express themselves.
+They look at us with their goggly eyes, seemingly naive, yet they are able to understand whole conversations.
+I am learning new languages too, and I feel like I can't express myself as much as I can read.
+This is my first shot writing a Dockerfile (I put 3 of them in MoreDockerfiles directory), I will try to make it better and study more.
+Thank you for your time and effort.
+
+Ido
